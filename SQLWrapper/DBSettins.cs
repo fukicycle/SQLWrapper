@@ -10,7 +10,7 @@
         public static string GetConnectionString()
         {
             if (DB_USERNAME == string.Empty || DB_PASSWORD == string.Empty || DB_NAME == string.Empty) return "Required parameter is not set.";
-            return string.Format("SERVER={0}; DATABASE={1}; UID={2}; PASSWORD={4}", DB_HOST, DB_NAME, DB_USERNAME, DB_PASSWORD);
+            return $"SERVER={DB_HOST}; DATABASE={DB_NAME}; UID={DB_USERNAME}; PASSWORD={DB_PASSWORD};";
         }
     }
 }
