@@ -30,5 +30,12 @@ namespace SQLWrapperTest
         {
             Assert.IsInstanceOf<MysqlWrapper>(MysqlWrapper.GetInstance());
         }
+
+        [Test]
+        [Order(4)]
+        public void SameInstanceTest()
+        {
+            Assert.IsTrue(MysqlWrapper.GetInstance() == MysqlWrapper.GetInstance());
+        }
     }
 }
