@@ -22,5 +22,24 @@ namespace SQLWrapper
         {
             return _mysqlWrapper;
         }
+
+        public object Select(string selectStatement)
+        {
+            using (MySqlConnection conn = new MySqlConnection(DBSettings.GetConnectionString()))
+            {
+                using (MySqlCommand cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = selectStatement;
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        int index = 1;
+                        while (reader.Read())
+                        {
+                            Type type = reader.GetFieldType(index);
+                        }
+                    }
+                }
+            }
+        }
     }
 }

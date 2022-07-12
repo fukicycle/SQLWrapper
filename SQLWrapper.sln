@@ -5,7 +5,7 @@ VisualStudioVersion = 17.2.32602.215
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SQLWrapper", "SQLWrapper\SQLWrapper.csproj", "{A0AED38C-FA72-4066-B754-86C9C7409455}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLWrapperTest", "SQLWrapperTest\SQLWrapperTest.csproj", "{F89AA816-6179-46BD-9EBB-0F4F485632D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SQLWrapperTest", "SQLWrapperTest\SQLWrapperTest.csproj", "{F89AA816-6179-46BD-9EBB-0F4F485632D6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{A0AED38C-FA72-4066-B754-86C9C7409455}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0AED38C-FA72-4066-B754-86C9C7409455}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0AED38C-FA72-4066-B754-86C9C7409455}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A9926BE9-DD97-4D9B-A35B-BF2C49E0ABD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A9926BE9-DD97-4D9B-A35B-BF2C49E0ABD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A9926BE9-DD97-4D9B-A35B-BF2C49E0ABD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A9926BE9-DD97-4D9B-A35B-BF2C49E0ABD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F89AA816-6179-46BD-9EBB-0F4F485632D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F89AA816-6179-46BD-9EBB-0F4F485632D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F89AA816-6179-46BD-9EBB-0F4F485632D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F89AA816-6179-46BD-9EBB-0F4F485632D6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -5,7 +5,8 @@ namespace SQLWrapperTest
         [SetUp]
         public void Setup()
         {
-            DBSettings.DB_HOST = "192.168.0.101";
+            DBSettings.DB_HOST = "172.17.1.29";
+            //DBSettings.DB_HOST = "192.168.0.101";
             DBSettings.DB_NAME = "champion_road";
             DBSettings.DB_USERNAME = "dev";
             DBSettings.DB_PASSWORD = "P@ssWord";
@@ -17,12 +18,13 @@ namespace SQLWrapperTest
         {
             Assert.IsTrue(DBSettings.GetConnectionString() == $"SERVER={DBSettings.DB_HOST}; DATABASE={DBSettings.DB_NAME}; UID={DBSettings.DB_USERNAME}; PASSWORD={DBSettings.DB_PASSWORD};");
         }
-        [Test]
-        [Order(2)]
-        public void ConnectTest()
-        {
-            Assert.IsTrue(MysqlWrapper.Connect());
-        }
+        //[Test]
+        //[Order(2)]
+        //public void ConnectTest()
+        //{
+        //    //Migrate to select method
+        //    Assert.IsTrue(MysqlWrapper.Connect());
+        //}
 
         [Test]
         [Order(3)]
@@ -36,6 +38,13 @@ namespace SQLWrapperTest
         public void SameInstanceTest()
         {
             Assert.IsTrue(MysqlWrapper.GetInstance() == MysqlWrapper.GetInstance());
+        }
+
+        [Test]
+        [Order(5)]
+        public void CanSelectTest()
+        {
+            Assert.IsInstanceOf<ComboBoxData>(MysqlWrapper.GetInstance().Select("select * from skills;"));
         }
     }
 }
